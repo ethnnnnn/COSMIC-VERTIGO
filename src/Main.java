@@ -1,6 +1,7 @@
-import entities.*;
-import environment.*;
-import utils.*;
+package src;
+import src.entities.*;
+import src.environment.*;
+import src.utils.*;
 import java.util.*;
 import java.io.*;
 public class Main {
