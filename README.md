@@ -42,4 +42,7 @@ If you're weird or you can't get the above stuff to work, these are the steps to
 1. Make sure you've navigated to the repository folder with `cd COSMIC-VERTIGO`.
 2. Compile with `javac src/Main.java src/entities/*.java src/environment/*.java src/utils/*.java`.
 3. Package into a JAR file with `jar cvfm COSMIC-VERTIGO.jar manifest.txt src/`.
-4. Run with `java -jar COSMIC-VERTIGO.jar`.
+
+### Run
+1. Make sure you're still in the repo folder,
+2. Then run with `java -jar COSMIC-VERTIGO.jar`.
