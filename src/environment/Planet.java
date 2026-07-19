@@ -1,6 +1,6 @@
-package environment;
-import entities.*;
-import utils.*;
+package src.environment;
+import src.entities.*;
+import src.utils.*;
 import java.util.*;
 import java.io.*;
 public class Planet {
