@@ -8,7 +8,7 @@ The goal of the game is to explore as many solar systems and planets as possible
 ## Downloading
 To get the game on your own device, you need a couple things:
 1. The latest zipped release from the [Releases tab](https://github.com/ethnnnnn/COSMIC-VERTIGO/releases) (unzip it on your computer please).
-2. Java 21 or newer installed on your device
+2. Java 17 or newer installed on your device
 
 Assuming you have those things, follow the directions according to your operating system below:
 
@@ -20,5 +20,26 @@ Double-click the `run.sh` file.
 
 There's a good chance that your computer will block you from running it, since your OS probably won't grant it permissions to run a terminal window. If this happens, just run `chmod +x run.sh` in your terminal to fix it. Then try again and it should work!
 
-### Running via Terminal
-If you're weird and either can't or don't want to use either of the run files, then copy `COSMIC-VERTIGO.jar` from the zip file into your directory of choice, navigate to said directory in terminal with `cd`, and run the file with `java -jar COSMIC-VERTIGO.jar`.
+### Note for Everyone:
+
+*If you want to run it via terminal instead, you can also do that with:*
+
+`
+cd COSMIC-VERTIGO
+java -jar COSMIC-VERTIGO.jar
+`
+
+***If none of this works, refer to the building process below.***
+
+## Building
+If you're weird or you can't get the above stuff to work, these are the steps to build the game yourself.
+
+### Prereqs
+1. Clone the repository with `git clone https://github.com/ethnnnnn/COSMIC-VERTIGO.git`.
+2. Ensure you have as new a version of JDK/JRE/Java installed as possible.
+
+### Compile
+1. Make sure you've navigated to the repository folder with `cd COSMIC-VERTIGO`.
+2. Compile with `javac src/Main.java src/entities/*.java src/environment/*.java src/utils/*.java`.
+3. Package into a JAR file with `jar cvfm COSMIC-VERTIGO.jar manifest.txt src/`.
+4. Run with `java -jar COSMIC-VERTIGO.jar`.
