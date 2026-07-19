@@ -1,5 +1,6 @@
 package entities;
 import environment.*;
+import utils.*;
 import java.util.*;
 import java.io.*;
 public class Resource {
