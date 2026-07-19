@@ -7,8 +7,8 @@ The goal of the game is to explore as many solar systems and planets as possible
 
 ## Downloading
 To get the game on your own device, you need a couple things:
-1. The latest zipped release from the Releases tab (unzip it on your computer please).
-2. Java 21 or newer installed on your device.
+1. The latest zipped release from the [Releases tab](https://github.com/ethnnnnn/COSMIC-VERTIGO/releases) (unzip it on your computer please).
+2. Java 21 or newer installed on your device
 
 Assuming you have those things, follow the directions according to your operating system below:
 
@@ -19,3 +19,6 @@ Double-click the `run.bat` file.
 Double-click the `run.sh` file.
 
 There's a good chance that your computer will block you from running it, since your OS probably won't grant it permissions to run a terminal window. If this happens, just run `chmod +x run.sh` in your terminal to fix it. Then try again and it should work!
+
+### Running via Terminal
+If you're weird and either can't or don't want to use either of the run files, then copy `COSMIC-VERTIGO.jar` from the zip file into your directory of choice, navigate to said directory in terminal with `cd`, and run the file with `java -jar COSMIC-VERTIGO.jar`.
