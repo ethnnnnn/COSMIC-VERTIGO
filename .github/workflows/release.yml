@@ -1,0 +1,37 @@
+name: Build and Package Java Game
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+
+    - name: Compile and Package JAR
+      run: |
+        javac src/Main.java src/entities/*.java src/environment/*.java src/utils/*.java
+        jar cvfm COSMIC-VERTIGO.jar manifest.txt src/
+
+    - name: Bundle into Zip Folder
+      run: |
+        mkdir COSMIC-VERTIGO-GAME
+        cp COSMIC-VERTIGO.jar run.bat run.sh COSMIC-VERTIGO-GAME/
+        zip -r COSMIC-VERTIGO.zip COSMIC-VERTIGO-GAME/
+
+    - name: Upload Zip Package to Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: COSMIC-VERTIGO.zip
