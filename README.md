@@ -1,4 +1,7 @@
 # COSMIC-VERTIGO
+
+<img src="https://raw.githubusercontent.com/ethnnnnn/COSMIC-VERTIGO/refs/heads/main/assets/title.png" width="400"> <img src="https://raw.githubusercontent.com/ethnnnnn/COSMIC-VERTIGO/refs/heads/main/assets/system.png" width="400"> <img src="https://raw.githubusercontent.com/ethnnnnn/COSMIC-VERTIGO/refs/heads/main/assets/planet.png" width="300">
+
 A very simple procedurally generated and text-based open-world space exploration game.
 
 This was the final project that my friend and I made for our AP Comp Sci course. We ended up going way overboard because we had too much time on our hands, and I decided it was something worth putting on GitHub. The game is entirely text-based and written in Java, and hopefully soon it will be capable of running in terminal environments and possibly (with some Python implementation or something of the like) in browsers as well. Its generation system, while far more limited in scope, is inspired by the video game No Man's Sky by Hello Games.
