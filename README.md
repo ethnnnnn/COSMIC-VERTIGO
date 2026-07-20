@@ -25,16 +25,13 @@ Double-click the `run.bat` file.
 ### Mac/Linux
 Double-click the `run.sh` file.
 
-There's a good chance that your computer will block you from running it, since your OS probably won't grant it permissions to run a terminal window. If this happens, just run `chmod +x run.sh` in your terminal to fix it. Then try again and it should work!
+*There's a good chance that your computer will block you from running it, since your OS probably won't grant it permissions to run a terminal window. If this happens, just run `chmod +x run.sh` in your terminal to fix it. Then try again and it should work!*
 
-### Note for Everyone:
+### NOTE FOR EVERYONE:
 
 *If you want to run it via terminal instead, you can also do that with:*
 
-`
-cd COSMIC-VERTIGO
-java -jar COSMIC-VERTIGO.jar
-`
+`cd COSMIC-VERTIGO` and then either: `./run.bat` or: `./run.sh` or: `java -jar COSMIC-VERTIGO.jar`
 
 ***If none of this works, refer to the building process below.***
 
