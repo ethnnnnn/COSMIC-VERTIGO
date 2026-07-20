@@ -1,6 +1,6 @@
-package src.environment;
-import src.entities.*;
-import src.utils.*;
+package environment;
+import entities.*;
+import utils.*;
 import java.util.*;
 import java.io.*;
 public class Galaxy {
