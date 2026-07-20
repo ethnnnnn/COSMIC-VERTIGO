@@ -8,6 +8,10 @@ This was the final project that my friend and I made for our AP Comp Sci course.
 
 The goal of the game is to explore as many solar systems and planets as possible. In order to do this, one must continually maintain their ship's fuel, health and shield for planetary trips and system warps - if any one of these stats drops to zero, you crash. Some strategy is required to figure out which planets are most likely to get you what you need without hurting already weak stats, based on the types/biomes and sizes of planets; however, there is also some luck of the draw. Technically, the game runs out of solar system naming combinations at the 480th system, and it will probably crash. However, I really doubt that anyone could get that far, as our game isn't necessarily the most well-balanced (although I still think I did a decent job). If you do, and something weird happens, congratulations.
 
+
+<img src="https://raw.githubusercontent.com/ethnnnnn/COSMIC-VERTIGO/refs/heads/main/assets/title.png" width="500">
+
+
 ## Downloading
 To get the game on your own device, you need a couple things:
 1. The latest zipped release from the [Releases tab](https://github.com/ethnnnnn/COSMIC-VERTIGO/releases) (unzip it on your computer please).
