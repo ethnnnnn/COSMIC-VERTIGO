@@ -1,6 +1,6 @@
 # COSMIC-VERTIGO
 
-<img src="https://raw.githubusercontent.com/ethnnnnn/COSMIC-VERTIGO/refs/heads/main/assets/system.png" width="250">  <img src="https://raw.githubusercontent.com/ethnnnnn/COSMIC-VERTIGO/refs/heads/main/assets/planet.png" width="700">
+<img src="https://raw.githubusercontent.com/ethnnnnn/COSMIC-VERTIGO/refs/heads/main/assets/system.png" width="250">  <img src="https://raw.githubusercontent.com/ethnnnnn/COSMIC-VERTIGO/refs/heads/main/assets/planet.png" width="500">
 
 A very simple procedurally generated and text-based open-world space exploration game.
 
