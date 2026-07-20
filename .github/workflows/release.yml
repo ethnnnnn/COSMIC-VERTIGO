@@ -1,4 +1,4 @@
-name: Build and Package Java Game
+name: Build Executables
 
 on:
   release:
@@ -6,32 +6,47 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
 
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
+      - name: checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
-      with:
-        java-version: '17'
-        distribution: 'temurin'
+      - name: setup JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          
+      - name: Compile and Package JAR
+        run: |
+          mkdir bin
+          mkdir jar-in
+          javac -d bin src/Main.java src/entities/*.java src/environment/*.java src/utils/*.java
+          jar cvfm jar-in/COSMIC-VERTIGO.jar manifest.txt -C bin .
 
-    - name: Compile and Package JAR
-      run: |
-        javac src/Main.java src/entities/*.java src/environment/*.java src/utils/*.java
-        jar cvfm COSMIC-VERTIGO.jar manifest.txt src/
+      - name: run jpackage
+        run: |
+          mkdir dist
 
-    - name: Bundle into Zip Folder
-      run: |
-        mkdir COSMIC-VERTIGO-GAME
-        cp COSMIC-VERTIGO.jar run.bat run.sh COSMIC-VERTIGO-GAME/
-        zip -r COSMIC-VERTIGO.zip COSMIC-VERTIGO-GAME/
-
-    - name: Upload Zip Package to Release
-      uses: softprops/action-gh-release@v2
-      with:
-        files: COSMIC-VERTIGO.zip
+          jpackage \
+            --input jar-in/ \
+            --name "CosmicVertigo" \
+            --main-jar "COSMIC-VERTIGO.jar" \
+            --main-class "Main" \
+            --dest dist \
+            --vendor "ethnnnnn" \
+            --app-version "${${{ github.ref_name }}#v}" \
+            
+      - name: upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: dist/*
+          tag: ${{ github.ref }}
+          overwrite: true
+          file_glob: true
+          
