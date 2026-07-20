@@ -1,6 +1,6 @@
-package src.utils;
-import src.entities.*;
-import src.environment.*;
+package utils;
+import entities.*;
+import environment.*;
 import java.util.*;
 import java.io.*;
 public class M {
